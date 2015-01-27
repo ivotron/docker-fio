@@ -1,0 +1,13 @@
+[global]
+ioengine=libaio
+direct=0
+size=1m
+group_reporting
+thread
+filename=/mnt/fio-test-file
+
+[sequential-fill]
+description=Sequential fill phase
+rw=write
+iodepth=16
+bs=1M
