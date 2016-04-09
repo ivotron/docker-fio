@@ -1,13 +1,13 @@
 [global]
 ioengine=libaio
 direct=0
-size=1m
+size=3g
 group_reporting
 thread
-filename=/mnt/fio-test-file
+filename=/mount/fio-test-file
 
 [sequential-fill]
 description=Sequential fill phase
 rw=write
 iodepth=16
-bs=1M
+bs=4k

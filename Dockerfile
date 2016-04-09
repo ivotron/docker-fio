@@ -1,9 +1,9 @@
-FROM stackbrew/ubuntu:trusty
+FROM debian:jessie
 
-MAINTAINER Ivo Jimenez, ivo.jimenez@gmail.com
+RUN apt-get update && apt-get install -y fio && \
+    mkdir /root/examples && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN apt-get update -yq && apt-get install -yq fio
-
-RUN mkdir /data
+ADD examples/ /root/examples
 
 ENTRYPOINT ["fio"]
