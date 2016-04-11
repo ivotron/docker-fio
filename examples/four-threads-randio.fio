@@ -1,6 +1,6 @@
 [global]
 rw=randread
-size=3g
+size=256m
 directory=/mount/
 ioengine=libaio
 iodepth=4
