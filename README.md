@@ -3,10 +3,6 @@ Convenience container for executing fio.
 Example:
 
 ```bash
-docker \
-  run -ti --rm \
-      -v /mnt/hdd1/:/mnt \
-      -v `pwd`/:/data \
-      ivotron/fio:latest \
-         --minimal /data/test.fio > out
+docker run --rm -v /mnt/hdd1/:/mount ivotron/fio:latest \
+  --minimal examples/sequential-fill.fio > result
 ```
